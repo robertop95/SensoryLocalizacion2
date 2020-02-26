@@ -37,19 +37,10 @@ class LocationActivity : AppCompatActivity() {
 
         Toast.makeText(this, "Estas en localización", Toast.LENGTH_LONG).show()
 
-        /*ListaLocal.setOnItemClickListener { _, _, position, _ ->
-            /*Toast.makeText(this, "Has hecho click en la localización: ${items[position]}",
-                Toast.LENGTH_LONG).show()*/
-            val bundle = Bundle()
-            items[position]
-            bundle.putDouble(DialogFragment.LONGITUD, ubicacionActual.longitude)
-            bundle.putDouble(DialogFragment.LATITUD, ubicacionActual.latitude)
-            bundle.putString(DialogFragment.TEXTO_BOTON, "Aceptar")
-
-            val dialogView = DialogFragment()
-            dialogView.arguments = bundle
-            dialogView.show(supportFragmentManager, "error_dialog_mapview")
-        }*/
+        ListaLocal.setOnItemClickListener { _, _, position, _ ->
+            Toast.makeText(this, "Has hecho click en la localización: ${items[position]}",
+                Toast.LENGTH_LONG).show()
+        }
     }
 
     private fun checkLocalionPermission() {
