@@ -35,6 +35,8 @@ class LocationActivity : AppCompatActivity() {
         adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, items)
         ListaLocal.adapter = adapter
 
+        Toast.makeText(this, "Estas en localización", Toast.LENGTH_LONG).show()
+
         /*ListaLocal.setOnItemClickListener { _, _, position, _ ->
             /*Toast.makeText(this, "Has hecho click en la localización: ${items[position]}",
                 Toast.LENGTH_LONG).show()*/
